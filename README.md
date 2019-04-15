@@ -12,3 +12,5 @@ The backend used for classification is tensorflow and both models were trained o
 to run this app the user may write in their R interface the following command
 
 shiny::runGitHub(repo="A-Deep-Learning-based-App",username="R-S-P-MODELS")
+
+You can also clone the repository and build the docker image
