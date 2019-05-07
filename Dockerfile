@@ -54,12 +54,12 @@ RUN R -e "install.packages(c('reticulate','keras','jpeg'), repos='https://cloud.
 #COPY APPLastVersion.R /root/Exploration
 #COPY Encontrar_candidatos_dataset_v1.R /root/Exploration
 #COPY Rprofile.site /usr/lib/R/etc/
-COPY app.R  app.R
+COPY appOnlyFigures.R appOnlyFigures.R
 COPY classify_function.py classify_function.py  
 COPY KerasRAndPythonScript.R KerasRAndPythonScript.R  
 COPY mlb35.pickle mlb35.pickle   
 COPY plants35.model plants35.model
 EXPOSE 3838
 
-CMD ["R", "-e", "shiny::runApp('app.R',port=3838,host='0.0.0.0',launch.browser=FALSE)"]
+CMD ["R", "-e", "shiny::runApp('appOnlyFigures.R',port=3838,host='0.0.0.0',launch.browser=FALSE)"]
 #CMD ["R", "-e", "shiny::runApp('/home/rafael/Downloads/APPs/DataExploration/APPLastVersion.R')"]
